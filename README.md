@@ -17,6 +17,12 @@ The application is built from scratch using
 - HTML
 - PostgreSQL
 
+
+
+https://user-images.githubusercontent.com/43679591/217369786-a945180d-c4e8-4671-b526-96c2bc18f0cc.mov
+
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
