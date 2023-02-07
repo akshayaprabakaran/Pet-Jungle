@@ -1,11 +1,3 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     Petjungle.Repo.insert!(%Petjungle.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+PetJungle.DataImports.DataImport.column_data("priv/repo/data/plants.csv")
+PetJungle.DataImports.DataImport.column_data("priv/repo/data/pets.csv")
+PetJungle.DataImports.DataImport.column_data("priv/repo/data/petfriendly.csv")
