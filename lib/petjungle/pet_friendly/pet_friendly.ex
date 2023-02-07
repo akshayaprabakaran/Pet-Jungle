@@ -13,6 +13,5 @@ defmodule PetJungle.PetFriendly.PetFriendly do
     pet_friendly
     |> cast(params, @required_fields)
     |> validate_required(@required_fields)
-    |> unique_constraint([:plant_id, :pet_id])
   end
 end

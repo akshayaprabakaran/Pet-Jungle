@@ -1,10 +1,10 @@
 common_name,botanical_name,plant_type
-spider plant,Chlorophytum comosu,both
+spider,Chlorophytum comosu,both
 Parlor Palm,Chamaedorea elegans,both
 Areca Palm,Chrysalidocarpus lutescens,indoor
-orbifolia prayer plant,calathea orbifolia ,indoor
-sunflower plant,Helianthus annuus,outdoor
-cosmos plant,Cosmos bipinnatus,outdoor
+orbifolia prayer,calathea orbifolia ,indoor
+sunflower,Helianthus annuus,outdoor
+cosmos,Cosmos bipinnatus,outdoor
 blue mist,Caryopteris,outdoor
 zinnia,zinnia,outdoor
 valerian,Valeriana officinalis,outdoor

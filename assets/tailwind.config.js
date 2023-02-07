@@ -10,7 +10,12 @@ module.exports = {
     '../lib/*_web/**/*.*ex'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/assets/petplants.png')",
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

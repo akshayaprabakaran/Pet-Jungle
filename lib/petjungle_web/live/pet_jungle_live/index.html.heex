@@ -1,0 +1,40 @@
+<div class="flex flex-wrap">
+  <div class="w-full md:w-2/3">
+    <div class="card shadow">
+      <div class="card-header md:flex justify-between">
+       <h1 align="center" class="card-title">
+          Pet Friendly Plants
+        </h1>
+        <%= f = form_for @changeset, "#", phx_change: "search_plants", as: "search_plants" %>
+          <%= label f, :search_phrase, class: "tag-label" do %>
+            <div class="tag-icon">
+              <%= text_input f, :search_phrase, class: "tag-input", phx_debounce: 500, placeholder: "Search plant" %>
+            </div>
+          <% end %>
+      </div>
+      <div class="card-body prose max-w-full">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Common Name</th>
+              <th>Botanical Name</th>
+              <th>Plant Type</th>
+              <th>Pets</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="plants">
+            <%= for plant <- @plants do %>
+                <tr>
+                <td><%= plant.common_name %></td>
+                <td><%= plant.botanical_name %></td>
+                <td><%= plant.plant_type %></td>
+                <td><%= pet_friendly_list(plant.id)|> pet_icon_mapping() %></td>
+                </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
