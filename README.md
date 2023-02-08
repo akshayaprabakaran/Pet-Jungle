@@ -16,14 +16,17 @@ https://user-images.githubusercontent.com/43679591/217479308-07bb4a23-4e0b-4bf1-
 ## Pet Jungle's Filter Feature
 
 
+https://user-images.githubusercontent.com/43679591/217480609-3eee967b-3530-4fc3-a93a-b77068e17b91.mov
+
 
 As of now this project,
 
 - extracts csv dataset of plants, pets and their interdependency with respect to toxicity.
 - the extracted dataset is seeded into the database.
-- it searches and filters the name of the plants dynamically using fuzzy logic.
-- it filters the plants by the selected plant type (indoor or outdoor)
-- it filters the plants by the animal type (cat or dog or horse). This is a significant feature of the application.
+- searches and filters the name of the plants dynamically using fuzzy logic.
+- sorts plants by alphabetical order.
+- filters the plants by the selected plant type (indoor or outdoor).
+- filters the plants by the animal type (cat or dog or horse). This is a significant feature of the application!
 
 The application is built from scratch using
 - Elixir - Phoenix
