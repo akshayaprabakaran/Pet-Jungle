@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/43679591/217479308-07bb4a23-4e0b-4bf1-
 
 
 
-## Pet Jungle's Filter Feature
+## Pet Jungle's Filters Feature
 
 
 https://user-images.githubusercontent.com/43679591/217480609-3eee967b-3530-4fc3-a93a-b77068e17b91.mov
