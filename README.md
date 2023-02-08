@@ -1,12 +1,20 @@
 # Pet Jungle
 
-
-https://user-images.githubusercontent.com/43679591/217422268-4c05c0e8-5408-41cb-ad4e-352f0fd3d542.mov
-
-
 Pet Jungle is a socially informative project. People who are both pet lovers and plant lovers know how frustrating it is to manage plants in a household with pets. Many of us do not have much knowledge about the toxicity of plants to animal health. Not all plants are pet-safe. So with a motto to grow both pets and plants safely together, this web application focuses on providing the information about the plants, their toxicity level, the animals which are affected by plants(especially cat, dog and horse).
 
 Currently, this project is an MVP of my dream application. Lots of features, refactoring and enhancements are coming in! Stay tuned!
+
+Pet Jungle's Search Feature
+
+
+https://user-images.githubusercontent.com/43679591/217470095-161389d5-c9ae-403c-91d3-1f9ff48c857c.mov
+
+
+Pet Jungle's Filter Feature
+
+
+https://user-images.githubusercontent.com/43679591/217470224-eff1f8c7-3568-460c-aa67-b2f0724cc0c6.mov
+
 
 As of now this project,
 
