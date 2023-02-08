@@ -22,16 +22,21 @@ defmodule PetjungleWeb.PetJungleLive.Index do
 
   @impl true
   def handle_event(
-        "search_plants",
-        %{"search_plants" => %{"search_phrase" => search_phrase}},
+        "search_and_filter",
+        %{"search_and_filter" => %{"search_phrase" => "", "filter_by" => ""}},
         socket
-      )
-      when search_phrase == "" do
+      ) do
     {:noreply, assign(socket, :plants, list_plants())}
   end
 
   @impl true
-  def handle_event("search_plants", %{"search_plants" => search}, socket) do
+  def handle_event(
+        "search_and_filter",
+        %{"search_and_filter" => %{"search_phrase" => search, "filter_by" => ""}},
+        socket
+      ) do
+    search = %{"search_phrase" => search}
+
     search
     |> search_changeset()
     |> case do
@@ -41,6 +46,37 @@ defmodule PetjungleWeb.PetJungleLive.Index do
       _ ->
         {:noreply, socket}
     end
+  end
+
+  @impl true
+  def handle_event(
+        "search_and_filter",
+        %{"search_and_filter" => %{"filter_by" => filter_by}},
+        socket
+      ) do
+    filter = map_filters(filter_by)
+
+    {:noreply, assign(socket, :plants, Plants.list_plants(filter))}
+  end
+
+  defp map_filters("Indoor Only") do
+    %{plant_type: :indoor}
+  end
+
+  defp map_filters("Outdoor Only") do
+    %{plant_type: :outdoor}
+  end
+
+  defp map_filters("Cat Safe") do
+    %{pet_name: "Cat"}
+  end
+
+  defp map_filters("Dog Safe") do
+    %{pet_name: "Dog"}
+  end
+
+  defp map_filters("Horse Safe") do
+    %{pet_name: "Horse"}
   end
 
   defp apply_action(socket, :index, _params) do
@@ -71,11 +107,9 @@ defmodule PetjungleWeb.PetJungleLive.Index do
     end
   end
 
-  @types %{search_phrase: :string}
-
   defp search_changeset(attrs \\ %{}) do
     cast(
-      {%{}, @types},
+      {%{}, %{search_phrase: :string}},
       attrs,
       [:search_phrase]
     )
@@ -85,7 +119,7 @@ defmodule PetjungleWeb.PetJungleLive.Index do
     |> validate_format(:search_phrase, ~r/[A-Za-z0-9\ ]/)
   end
 
-  def get_image_url(pet) do
+  defp get_image_url(pet) do
     "/assets/#{pet}.png"
   end
 end

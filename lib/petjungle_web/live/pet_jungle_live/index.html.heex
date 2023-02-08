@@ -5,12 +5,14 @@
        <h1 align="center" class="card-title">
           Pet Friendly Plants
         </h1>
-        <%= f = form_for @changeset, "#", phx_change: "search_plants", as: "search_plants" %>
+        <%= f = form_for @changeset, "#", phx_change: "search_and_filter", as: "search_and_filter" %>
           <%= label f, :search_phrase, class: "tag-label" do %>
             <div class="tag-icon">
               <%= text_input f, :search_phrase, class: "tag-input", phx_debounce: 500, placeholder: "Search plant" %>
             </div>
-          <% end %>
+            <% end %>
+            <% options = ["Filter By": "", "Indoor Only": "Indoor Only", "Outdoor Only": "Outdoor Only", "Dog Safe": "Dog Safe", "Cat Safe": "Cat Safe", "Horse Safe": "Horse Safe"] %>
+            <%= select f, :filter_by, options, class: "tag-select tag-select-sm" %>
       </div>
       <div class="card-body prose max-w-full">
         <table class="table">
@@ -20,7 +22,6 @@
               <th>Botanical Name</th>
               <th>Plant Type</th>
               <th>Pets</th>
-              <th></th>
             </tr>
           </thead>
           <tbody id="plants">
