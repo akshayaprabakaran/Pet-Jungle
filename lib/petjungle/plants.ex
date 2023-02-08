@@ -8,6 +8,7 @@ defmodule PetJungle.Plants do
   def list_plants(filter \\ %{}) do
     Plant
     |> filter_with(filter)
+    |> order_by([p], asc: p.common_name)
     |> Repo.all()
   end
 
