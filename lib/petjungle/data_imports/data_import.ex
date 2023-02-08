@@ -47,7 +47,6 @@ defmodule PetJungle.DataImports.DataImport do
             plant_type: row["plant_type"]
           })
         )
-
       plant ->
         {:ok, plant}
     end
@@ -71,12 +70,12 @@ defmodule PetJungle.DataImports.DataImport do
   end
 
   defp maybe_insert(%{"plant_id" => _plant_id} = row) do
-    Repo.insert(
-      %PetFriendly{}
-      |> PetFriendly.changeset(%{
-        plant_id: row["plant_id"],
-        pet_id: row["pet_id"]
-      })
-    )
+        Repo.insert(
+          %PetFriendly{}
+          |> PetFriendly.changeset(%{
+            plant_id: row["plant_id"],
+            pet_id: row["pet_id"]
+          })
+        )
   end
 end

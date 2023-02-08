@@ -29,7 +29,11 @@
                 <td><%= plant.common_name %></td>
                 <td><%= plant.botanical_name %></td>
                 <td><%= plant.plant_type %></td>
-                <td><%= pet_friendly_list(plant.id)|> pet_icon_mapping() %></td>
+                <td>
+                <%= for pet <- pet_friendly_list(plant.id) do %>
+                    <img src={get_image_url(pet)}/>
+                <% end %>
+                </td>
                 </tr>
             <% end %>
           </tbody>

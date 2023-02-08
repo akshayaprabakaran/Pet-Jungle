@@ -54,29 +54,20 @@ defmodule PetjungleWeb.PetJungleLive.Index do
   end
 
   defp pet_friendly_list(plant_id) do
+    pet_list =
     PetFriendly.list_petfriendly()
-    |> Enum.map(fn {p_id, pet_id} ->
+    |> Enum.map(fn {p_id, pet_name} ->
       if p_id == plant_id do
-        pet_id
+        pet_name
       end
     end)
     |> Enum.reject(&(&1 == nil))
-  end
+    |> Enum.sort()
 
-  defp pet_icon_mapping(pet_list) do
     if pet_list == [] do
-      "TOXIC FOR ALL THREE PETS"
+      ["Toxic"]
     else
-      Enum.map(
-        pet_list,
-        &case &1 do
-          1 -> "CAT"
-          2 -> "DOG"
-          3 -> "HORSE"
-        end
-      )
-      |> Enum.sort()
-      |> Enum.join(", ")
+      pet_list
     end
   end
 
@@ -92,5 +83,9 @@ defmodule PetjungleWeb.PetJungleLive.Index do
     |> update_change(:search_phrase, &String.trim/1)
     |> validate_length(:search_phrase, min: 2)
     |> validate_format(:search_phrase, ~r/[A-Za-z0-9\ ]/)
+  end
+
+  def get_image_url(pet) do
+   "/priv/static/assets/#{pet}.png"
   end
 end

@@ -4,15 +4,10 @@ defmodule PetJungle.PetFriendly do
   alias PetJungle.PetFriendly.PetFriendly
   alias PetJungle.Pets.Pet
 
-  def list_pets_for_plant_id(plant_id) do
+  def list_petfriendly() do
     PetFriendly
     |> join(:inner, [pf], p in Pet, on: pf.pet_id == p.id)
-    |> where([pf, p], pf.plant_id == ^plant_id)
-    |> select([pf, p], p.name)
+    |> select([pf, p], {pf.plant_id, p.name})
     |> Repo.all()
-  end
-
-  def list_petfriendly() do
-    PetFriendly |> select([pf], {pf.plant_id, pf.pet_id}) |> Repo.all()
   end
 end
