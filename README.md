@@ -9,14 +9,12 @@ Lots of features, refactoring and enhancements are coming in! Stay tuned!
 ## Pet Jungle's Search Feature
 
 
-https://user-images.githubusercontent.com/43679591/217470095-161389d5-c9ae-403c-91d3-1f9ff48c857c.mov
+https://user-images.githubusercontent.com/43679591/217479308-07bb4a23-4e0b-4bf1-9a68-5bb8ab110642.mov
 
 
 
 ## Pet Jungle's Filter Feature
 
-
-https://user-images.githubusercontent.com/43679591/217470224-eff1f8c7-3568-460c-aa67-b2f0724cc0c6.mov
 
 
 As of now this project,
