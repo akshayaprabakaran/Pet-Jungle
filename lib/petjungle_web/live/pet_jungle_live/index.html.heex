@@ -31,7 +31,7 @@
                 <td><%= plant.plant_type %></td>
                 <td>
                 <%= for pet <- pet_friendly_list(plant.id) do %>
-                    <img src={get_image_url(pet)}/>
+                    <img src={get_image_url(pet)} width="45" height="45"/>
                 <% end %>
                 </td>
                 </tr>

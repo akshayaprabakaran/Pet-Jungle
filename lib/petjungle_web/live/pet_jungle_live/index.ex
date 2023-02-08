@@ -55,14 +55,14 @@ defmodule PetjungleWeb.PetJungleLive.Index do
 
   defp pet_friendly_list(plant_id) do
     pet_list =
-    PetFriendly.list_petfriendly()
-    |> Enum.map(fn {p_id, pet_name} ->
-      if p_id == plant_id do
-        pet_name
-      end
-    end)
-    |> Enum.reject(&(&1 == nil))
-    |> Enum.sort()
+      PetFriendly.list_petfriendly()
+      |> Enum.map(fn {p_id, pet_name} ->
+        if p_id == plant_id do
+          pet_name
+        end
+      end)
+      |> Enum.reject(&(&1 == nil))
+      |> Enum.sort()
 
     if pet_list == [] do
       ["Toxic"]
@@ -86,6 +86,6 @@ defmodule PetjungleWeb.PetJungleLive.Index do
   end
 
   def get_image_url(pet) do
-   "/priv/static/assets/#{pet}.png"
+    "/assets/#{pet}.png"
   end
 end
