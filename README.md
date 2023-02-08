@@ -1,4 +1,8 @@
-# Petjungle
+# Pet Jungle
+
+
+https://user-images.githubusercontent.com/43679591/217422268-4c05c0e8-5408-41cb-ad4e-352f0fd3d542.mov
+
 
 Pet Jungle is a socially advantageous project. In many cases, for people who are both pet lovers and plant lovers know how frustrating it is to manage plants in a household with pets. Many of us do not have much knowledge about the toxicity of plants to animal health. Not all plants are pet-safe. So with a motto to grow both pets and plants safely together, this web application focuses on providing the information about the plants, their toxicity level, the animals which are affected by plants(especially cat, dog and horse).
 
@@ -16,12 +20,6 @@ The application is built from scratch using
 - TailWind CSS
 - HTML
 - PostgreSQL
-
-
-
-https://user-images.githubusercontent.com/43679591/217369786-a945180d-c4e8-4671-b526-96c2bc18f0cc.mov
-
-
 
 To start your Phoenix server:
 
