@@ -3,7 +3,9 @@
     <div class="card shadow">
       <div class="card-header md:flex justify-between">
        <h1 align="center" class="card-title">
+        <img src= "/assets/plant.png" width="25" height="27"/>
           Pet Friendly Plants
+          <img src= "/assets/plant.png" width="25" height="27"/>
         </h1>
         <%= f = form_for @changeset, "#", phx_change: "search_and_filter", as: "search_and_filter" %>
           <%= label f, :search_phrase, class: "tag-label" do %>
